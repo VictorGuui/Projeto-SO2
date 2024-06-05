@@ -1,37 +1,21 @@
-import { User } from "infra/entities/user.entity";
-import { Repository } from "typeorm";
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken'
+import { Router } from "express";
 
-export class UserServices {
-  public constructor(
-    private readonly userRepository: Repository<User>
-  ) { }
+import appDataSource from "../infra/data-source";
+import { User } from "../infra/entities/user.entity";
+import UserService from "../services/user.service";
+import UserController from "../controller/user.controller";
 
-  public async createUser(user: User,): Promise<User | null> {
-    user.senha = await bcrypt.hash(user.senha, 10)
-    return await this.userRepository.save(user)
-  }
+const userRouter = Router()
 
-  public async login(user: User, password: string): Promise<boolean> {
-    return await bcrypt.compare(password, user.senha)
-  }
+const service = new UserService(appDataSource.getRepository(User))
+const controller = new UserController(service)
 
-  public async createToken(user: User) {
-    const token = jwt.sign({
-      userId: user.id
-    },
-      process.env.SECRET_KEY ?? '',
-      {
-        expiresIn: '8h'
-      }
-    )
+userRouter.post('/create', async (req, res) => {
+    await controller.createUserController(req, res)
+})
 
-    const { senha: _, ...userLogin } = user
+userRouter.post('/login', async (req, res) => {
+    await controller.loginController(req, res)
+})
 
-    return {
-      user: userLogin,
-      token: token
-    }
-  }
-}
+export default userRouter

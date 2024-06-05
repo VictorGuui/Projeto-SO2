@@ -3,35 +3,35 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity()
 export class Reservation {
   @PrimaryGeneratedColumn()
-  id!: number;
+  id!: number
 
   @Column()
-  roomName!: string
+  name!: string
+
+  @Column({ default: null })
+  photo_url!: string
 
   @Column()
-  roomPhoto!: string
+  location!: string
 
   @Column()
-  roomLocation!: string
+  date!: Date
 
-  @Column()
-  dateOfUse!: Date
+  @Column('time')
+  startTime!: Date
 
-  @Column()
-  startTime!: string
-
-  @Column()
-  endTime!: string
+  @Column('time')
+  endTime!: Date
 
   @Column()
   responsible!: string
 
-  @Column('text', { nullable: true })
-  reason!: string;
+  @Column()
+  reason!: string
 
-  @Column('text', { nullable: true })
-  additionalInfo!: string;
+  @Column()
+  info!: string
 
-  @Column('text', { nullable: true })
-  guests!: string;
+  @Column()
+  guests!: string
 }
