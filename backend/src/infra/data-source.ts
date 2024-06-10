@@ -18,7 +18,7 @@ const appDataSource = new DataSource({
     password: DB_PASSWORD,
     database: DB_NAME,
     entities: [`${__dirname}/entities/*.{ts,js}`],
-    synchronize: true
+    synchronize: false
 });
 
 export default appDataSource;
