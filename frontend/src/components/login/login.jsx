@@ -1,5 +1,7 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -50,7 +52,7 @@ export const Login = () => {
         }}
       >
         <Typography component="h1" variant="h5">
-          Login
+          Entrar
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -79,7 +81,7 @@ export const Login = () => {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Registrar
+            Entrar
           </Button>
           <Grid container>
             <Grid item>

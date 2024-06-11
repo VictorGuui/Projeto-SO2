@@ -1,9 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Form, RouterProvider } from "react-router-dom";
 import { Login } from "../components/login/login";
 import { SignUp } from "../components/signup/signup";
 import { Home } from "../components/home/home";
 import ProtectedRoute from './ProtectedRoute';
-import { Form } from "../components/form/form";
 
 export const Routes = () => {
   const routes = [
