@@ -14,7 +14,7 @@ export const Home = () => {
   useEffect(() => {
     const fetchReservations = async () => {
       try {
-        const response = await fetch('http://18.204.218.70:3000/reservation/fetch'); // Ajuste a URL conforme necessário
+        const response = await fetch('http://54.175.44.226:3000/reservation/fetch'); // Ajuste a URL conforme necessário
         if (response.ok) {
           const data = await response.json();
           setReservations(data);
