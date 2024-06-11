@@ -1,0 +1,65 @@
+#app {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .room-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  .room-name {
+    font-weight: bold;
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .container_list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reservas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+  }
+  
+  .reserva-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(2, 0, 0, 0.5);
+    overflow: hidden;
+    padding: 8px;
+  }
+  
+  .reserva-info {
+    padding: 20px;
+  }
+  
+  .reserva-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .add-reservation {
+    width: 40%;
+    font-weight: bold;
+  }
+  
+  .reserva-info h3 {
+    margin-bottom: 10px;
+  }
+  
+  .reserva-info p {
+    margin-bottom: 5px;
+  }
