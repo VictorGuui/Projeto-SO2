@@ -1,26 +1,20 @@
-import React, { useState, useRef } from 'react';
-import ReactDOM from 'react-dom';
-import {
-  CssBaseline,
-  Container,
-  Grid,
-  Box,
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  TextField,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  FormHelperText,
-  FormControlLabel,
-  Checkbox,
-} from '@mui/material';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Header } from '../header/header';
+import { 
+    ToastContainer, 
+    toast, 
+} from 'react-toastify';
+import 
+    React, { 
+    useState, 
+    useRef, 
+} from 'react';
+import {
+  Container,
+  Grid,
+  Button,
+  TextField,
+} from '@mui/material';
 
 export const Form = () => {
   const [name, setName] = useState('');
@@ -54,7 +48,7 @@ export const Form = () => {
     formData.append('info', info);
     formData.append('guests', guests)
 
-    const request = fetch('http://52.91.161.158:3000/reservation/create', {
+    const request = fetch('http://52.91.60.139:3000/reservation/create', {
         method: 'POST',
         body: formData
     })
