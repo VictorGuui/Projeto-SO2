@@ -18,7 +18,7 @@ export const Login = () => {
     if(!data.get("user") || !data.get("password")){
       window.alert("Insira todos os dados")
     }else{
-      const request = fetch('http://52.91.60.139/user/login', {
+      const request = fetch('http://52.91.60.139:3000/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
