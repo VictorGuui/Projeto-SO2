@@ -18,7 +18,7 @@ export const Login = () => {
     if(!data.get("user") || !data.get("password")){
       window.alert("Insira todos os dados")
     }else{
-      const request = fetch('http://52.91.161.158:3000/user/login', {
+      const request = fetch('http://52.91.60.139/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ export const Login = () => {
         }}
       >
         <Typography component="h1" variant="h5">
-          Entrar
+          Login
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField

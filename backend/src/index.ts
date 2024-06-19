@@ -9,7 +9,7 @@ require('dotenv').config()
 
 app.use(Express.json())
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://52.91.60.139:3000',
     credentials: true
 }))
 
