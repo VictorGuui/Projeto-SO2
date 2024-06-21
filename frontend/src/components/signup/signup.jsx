@@ -13,7 +13,7 @@ export const SignUp = () => {
     if(data.get("password") != data.get("confirm_password")){
         window.alert("Senhas não estão iguais")    
     } else {
-      const request = fetch('http://3.82.145.126:3000/user/create', {
+      const request = fetch('http://3.82.200.132:3000/user/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

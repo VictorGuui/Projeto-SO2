@@ -48,7 +48,7 @@ export const Form = () => {
     formData.append('info', info);
     formData.append('guests', guests)
 
-    const request = fetch('http://3.82.145.126:3000/reservation/create', {
+    const request = fetch('http://3.82.200.132:3000/reservation/create', {
         method: 'POST',
         body: formData
     })
