@@ -49,7 +49,7 @@ export const Home = () => {
     <>
       <CssBaseline />
       <Header
-        title="Reservas Feitas"
+        title="Reservas Feitas - Server 2"
         buttonText="Criar Nova Reserva"
         buttonTo="/form"
         searchTerm={searchTerm}
